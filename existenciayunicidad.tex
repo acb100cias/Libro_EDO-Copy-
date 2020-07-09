@@ -1,0 +1,60 @@
+\section{Existencia y unicidad de las soluciones}
+
+\begin{definitionT}
+Consideremos una función $f:\mathbb{R}^{n+1}\longrightarrow\mathbb{R}^n$ definida en $|t-t_0|\leq a$ con $x\in D\subset\mathbb{R}^n$. Diremos que $f$ satisface la condición de Lipschitz respecto a $x$ si en el conjunto $\left[t_0-a,t_0+a\right]\times D$ se tiene que:
+$$
+||f(t,x_1)-f(t,x_2) ||\leq L ||x_1-x_2||
+$$
+donde $x_1$, $x_2\in D$ y $L>0$. $L$ es llamada constante de Lipschitz para $f$.
+\end{definitionT}
+
+\begin{obsT}
+Si una función cumple la condición de Lipschitz, entonces es continua y si la función es de clase $C^1$ entonces necesariamente cumple la condición de Lipschitz
+\end{obsT}
+
+\begin{theoremeT}
+Consideremos el problema de condiciones iniciales
+\begin{eqnarray}
+\dot{x}&=&f(t,x)\nonumber\\
+x(t_0)&=&x_0\label{1}
+\end{eqnarray}
+con $x\in D\subset\mathbb{R}^n$, $|t-t_0|\leq a$ y $D=\{x | ||x-x_0||\leq d\}$, $a,d>0$. Si la función $f$ satisface que:
+\begin{enumerate}
+    \item Es Lipschitz continua en $G=[t_0-a,t_0+a]\times D$
+    \item Es Lipschitz continua en $x$
+\end{enumerate}
+entonces el problema \ref{1} tiene solución única en $|t-t_0|\leq \inf (a,\frac{d}{M})$ con $M=sup_{G} ||f||$
+
+\end{theoremeT}
+
+\begin{theoremeT}{\bf Desigualdad de Gronwall}
+Supongamos que para $t\in(t_0,T_0+a)$, $a>0$ se cumple que:
+$$
+\varphi(t)\leq \delta_1\int_{t_0}^{t}\psi(s)\varphi(s)\mathrm{d}s +\delta_2
+$$
+con $\varphi\leq 0$ y $\psi\leq 0$ continuas sobre $(t_0,T_0+a)$, $\delta_i >0$ . Entonces para $t\in (t_0,T_0+a)$:
+
+$$
+\varphi(t)\leq \delta_2e^{\delta_1\int_{t_0}^{t}\psi(s)\varphi(s)\mathrm{d}s}
+$$
+
+\end{theoremeT}
+
+\begin{proof}
+Como $\varphi(t)\leq \delta_1\int_{t_0}^{t}\psi(s)\varphi(s)\mathrm{d}s +\delta_2$ , tenemos que:
+$$
+\frac{\varphi(t)}{\delta_1\int_{t_0}^{t}\psi(s)\varphi(s)\mathrm{d}s +\delta_2}\leq 1
+$$
+multiplicando por $\selta_1\psi(t)$ e integrando de $t_0$ a $t$:
+$$
+\int_{t_0}^{t}\frac{\delta_1\psi(s)\varphi(s)\mathrm{d}s}{\delta_1\int_{t_0}^{t}\psi(\tau)\varphi(\tau)\mathrm{d}\tau +\delta_2}\leq \delta_1\int_{t_0}^{t}\psi(s)\mathrm{d}s
+$$
+así
+$$
+ln(\delta_1\int_{t_0}^t\psi(s)\varphi(s)\mathrm{d}s+\delta_2)-ln\delta_2\leq\delta_1\int_{t_0}^t\psi(s)\mathrm{d}s
+$$
+y por tanto
+$$
+\varphi(t_0\leq\delta_1\int_{t_0}^t\psi(s)\varphi(s)\mathrm{d}s+\delta_2\leq\delta_2e^{(\delta_1\int_{t_0}^t\psi(s)\mathrm{d}s)}
+$$
+\end{proof}

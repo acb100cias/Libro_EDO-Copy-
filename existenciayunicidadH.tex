@@ -1,0 +1,91 @@
+\section{Teoremas de existencia y unicidad de las soluciones}
+
+La clase deecuacion es que son integrables por cuadraturas es muy limitada, por ello la mayoría de las ecuaciones se resuelve usando métodos de aproximación numérica...
+
+
+\begin{theorem}
+Si en la ecuación
+$$
+\dfrac{\mathrm{d}f}{\mathrm{d}t}=f(x,y)
+$$
+la función $f$ es continua en $D=\left[x_0-a,x_0+a\right]\times\left[y_0-b,y_0+b\right]$, además $f$ es Lipschitz-continua en $D$, es decir que existe una constante $N$ tal que $|f(x_1,y_1)-f(x_2,y_2)|\leq N|y_1,y_2|$ para $(x_i,y_i)\in D$.
+
+Entonces existe una solución única $y=\bar{y}(x)$ en el intervalo $\left[x_0-H,x_0+H\right]$ que satisface $y(x_0)=y_0$ y donde $H<\min\{a,\frac{b}{M},\frac{1}{N}\}$, $M=\max_{D}\{|f(x,y)|\} $
+\end{theorem}
+
+
+Las condiciones del teorema  requieren aclaración. La solución p[ara la ecuación, que satisface las condiciones iniciales  existe sólo para $x\in [x_0-a,x_0+a]$ pero $y$ puede existir fuera del rectángulo $D$. Es decir $y=y_0\pm b$ para algún $x=x_1\in[x_0-a,x_0+a]$. Si $x_1>x_0$ para $x>x_1$, la solución puede no estardefinida.
+
+Podemos garantizar que $y=\bar{y}(x)$ no se sale de $D$ cuando $x\in[x_0-H,x_0+H]$ con $H<a$ y $H<\frac{b}{M}$, $M=\tan\alpha$. Donde $\alpha$ es el coeficiente angular de latangente a la curva integral buscada. Si estas rectas se salen de $D$ entonces las absisas de los puntos de corte son $x_0\pm\dfrac{b}{M}$. Así la absisa  del punto de salida de lacurva inegral de $D$ puede solamente ser menor o igual que $x_0+\frac{b}{M}$ y mayor o igual que $x_0-\frac{b}{M}$. Puede mostrarse ka existencia  dela solución en $[x_0-H,x_0+H]$ con $H=\min\{a,\frac{b}{M}\}$ pero será más sencillo mostrarlo para $H<\min\{a,\frac{b}{M},\frac{1}{N}\}$
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\draw[](-0.3,0)--(6,0);
+\draw (1,5)--(5,5);
+\draw (1,5)--(1,2);
+\draw (5,2)--(5,5);
+\draw (1,2)--(5,2);
+\draw[](0,-0.3)--(0,6);
+\draw (1.3,2)to[bend left](3.5,3.5);
+\filldraw (3.5,3.5) circle (2pt) ;
+\draw (3.5,3.5)to[bend right](4.8,5);
+\draw[dotted](3.5,3.5)--(3.5,0) node[pos=1.14]{$x_0$};
+\draw[dotted](3.5,3.5)--(0,3.5) node[pos=1.1]{$y_0$};
+\draw[dotted](1,5)--(1,0) node[pos=1.1]{$x_0-a$};
+\draw[dotted](5,2)--(5,0) node[pos=1.2]{$x_0+a$};
+\draw[dotted](1,5)--(0,5) node[pos=1.5]{$y_0+a$};
+\draw[dotted](5,2)--(0,2) node[pos=1.1]{$y_0-a$};
+\end{tikzpicture}
+    \caption{}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.25]{graficas1.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+
+La condición de Lipschitz 
+$$
+|f(x_1,y_1)-f(x_2,y_2)|\leq N(y_1-y_2)
+$$
+puede ser sustituida por otra más fuerte, pero más fácilmente comprobable, la existencia de $\partial_{y} f^{'}$ en $D$ y que sea acotada.
+
+En efecto para $(x,y)\in D$ y $|f'_y(x,y)|\leq N$ entonces por el teorema del valor intermedio:
+$$
+|f(x_1,y_1)-f(x_2,y_2)|=|f'_y(x,\xi)|-|y_1-y_2| 
+$$
+con $\xi\in (y_1,y_2)$. Así $(x,\xi)\in D$ y $|f_y(x,\xi)|\leq N$ , $|f(x,y_1)-f(x,y_2)|\leq N|y_1-y_2|$.
+
+\begin{proof}
+Observemos primero que 
+$$
+\left.\begin{array}{cc}
+    \dfrac{\mathrm{d}y}{\mathrm{d}x}&=f(x,y)  \\
+    &\\
+    y(x_0) &=y_0 
+\end{array}\right.
+$$
+es equivalente a
+$$
+y=y_0+\int_{x_0}^xf(x,y)\mathrm{d}x
+$$
+
+En efecto:
+$$
+\int_{x_0}^x\frac{\mathrm{d}y}{\mathrm{d}x}\mathrm{d}x=\int_{x_0}^xf(x,y)\mathrm{d}x
+$$
+así
+$$
+y(x)-y(x_0)=\int_{x_0}^xf(x,y)\mathrm{d}x
+$$
+y por tanto
+$$
+y(x)=y_0+\int_{x_0}^xf(x,y)\mathrm{d}x
+$$
+Ahora, hagamos una aproximación de  la solución 
+\end{proof}

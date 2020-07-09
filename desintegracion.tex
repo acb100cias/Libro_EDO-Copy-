@@ -1,0 +1,32 @@
+\section{Decaimiento radioactivo}
+
+La velocidad  de la desintegración radioactiva es proporcional a la cantidad $x$ de sustancia no desintegrada. Supongamos que en un momento inicial $t_0$ tenemos una masa $x(t_0)$ y $k$ es el coeficiente de desintegración, el fenómeno queda descrito por el siguiente problema de valores iniciales
+
+\begin{eqnarray}
+\dot{x}&=&-kx\\
+x(t_0)&=&x_0
+\end{eqnarray}
+
+La solución para este problema de valores iniciales ya la conocemos
+$$
+x(t)=x_0e^{-k(t-t_0)}
+$$
+
+Ahora qué tanta información obtenemos del conocimiento de esta solución. Podemos calcular el tiempo en el cual ya se ha desintegrado la mitad de la masa inicial. Haciendo $\tau=t-t_0$ tenemos:
+$$
+\frac{x_0}{2}=x_0e^{-k\tau}
+$$
+ así, tomando $x_0 =1$
+ $$
+ \frac{1}{2}=e^{-k\tau}
+ $$
+  y finalmente
+  $$
+  \ln(\frac{1}{2})=-k\tau
+  $$
+  o equivalentemente
+  $$
+  \tau=\frac{\ln 2}{k}
+  $$
+  
+  

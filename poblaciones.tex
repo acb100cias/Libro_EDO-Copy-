@@ -1,0 +1,37 @@
+\section{Modelos simples de poblaciones}
+
+Consideremos la hipótesis siguiente: Cierta población de seres vivos crece de forma proporcional al tamaño de la población actual. Si llamamos $X(t)$ al tamaño de la población actual entonces un mecanismo de crecimiento como el que se propone esta descrito por la siguiente ecuación:
+
+\begin{equation}
+    \frac{\mathrm{d}X}{\mathrm{d}t}=\rho X(t)
+\end{equation}
+donde $\rho\neq 0$ es la tasa de nacimientos per cápita
+
+La ecuación anterior es equivalente a la ecuación integral:
+
+\begin{equation}
+    \int_{X(0)}^{X(t)} \frac{\mathrm{d}X}{X} = \rho\int_0^t \mathrm{d}\tau 
+\end{equation}
+
+Si llamamos $X_0=X(0)$ a la población inicial, tenemos por el teorema fundamental del Cálculo:
+
+\begin{equation}
+    \ln (X(t))-\ln(X_0)=\rho(t)
+\end{equation}
+
+o bien:
+
+\begin{equation}
+    \ln (X(t))=\ln(X_0)+\rho(t)
+\end{equation}
+
+Tomando exponencial de ambos lados, obtenemos:
+\begin{equation}
+  X(t)= X_0 e^{\rho t} 
+\end{equation}
+
+Es decir que si la población cambia de forma proporcional a su tamaño actual, entonces esta crece de forma exponencial. El comportamiento predicho por este modelo es poco razonable. 
+
+El inglés Malthus propuso este modelo en el siglo XIX. Su argumento era que mientras los recursos (la comida, etc) se producida con una tasa geométrica, el crecimiento de la población es exponencial y por tanto crece indefinidamente. 
+
+
