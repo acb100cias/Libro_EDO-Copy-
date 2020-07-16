@@ -44,6 +44,12 @@
 
 \documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
 
+\usepackage{amsmath,amssymb}
+\usepackage{mathpazo}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+
 %----------------------------------------------------------------------------------------
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
@@ -62,7 +68,7 @@
 {\begin{tikzpicture}[remember picture,overlay]
 \node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
 \draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Ecuaciones Diferenciales\\[15pt] % Book title
-{\Large Una intrododucci\'on a sistemas no lineales}\\[20pt] % Subtitle
+{\Large Una intrododucci\'on a la dinámica no lineal}\\[20pt] % Subtitle
 {\huge Pedro Miramontes\\ Augusto Cabrera Becerril\\ Ulises Rayón}}}; % Author name
 \end{tikzpicture}};
 \end{tikzpicture}
