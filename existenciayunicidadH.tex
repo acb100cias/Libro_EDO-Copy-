@@ -1,9 +1,9 @@
 \section{Teoremas de existencia y unicidad de las soluciones}
 
-La clase deecuacion es que son integrables por cuadraturas es muy limitada, por ello la mayoría de las ecuaciones se resuelve usando métodos de aproximación numérica...
+La clase de las ecuaciones diferenciales ordinarias que son integrables por cuadraturas es muy limitada, por ello la mayoría de las ecuaciones se resuelve usando métodos de aproximación numérica...
 
 
-\begin{theorem}
+\begin{teorema}
 Si en la ecuación
 $$
 \dfrac{\mathrm{d}f}{\mathrm{d}t}=f(x,y)
@@ -11,7 +11,7 @@ $$
 la función $f$ es continua en $D=\left[x_0-a,x_0+a\right]\times\left[y_0-b,y_0+b\right]$, además $f$ es Lipschitz-continua en $D$, es decir que existe una constante $N$ tal que $|f(x_1,y_1)-f(x_2,y_2)|\leq N|y_1,y_2|$ para $(x_i,y_i)\in D$.
 
 Entonces existe una solución única $y=\bar{y}(x)$ en el intervalo $\left[x_0-H,x_0+H\right]$ que satisface $y(x_0)=y_0$ y donde $H<\min\{a,\frac{b}{M},\frac{1}{N}\}$, $M=\max_{D}\{|f(x,y)|\} $
-\end{theorem}
+\end{teorema}
 
 
 Las condiciones del teorema  requieren aclaración. La solución p[ara la ecuación, que satisface las condiciones iniciales  existe sólo para $x\in [x_0-a,x_0+a]$ pero $y$ puede existir fuera del rectángulo $D$. Es decir $y=y_0\pm b$ para algún $x=x_1\in[x_0-a,x_0+a]$. Si $x_1>x_0$ para $x>x_1$, la solución puede no estardefinida.

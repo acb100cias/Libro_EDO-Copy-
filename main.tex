@@ -44,52 +44,55 @@
 
 \documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
 
-\usepackage{amsmath,amssymb}
-\usepackage{mathpazo}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{graphicx}
+%\usepackage{amsmath,amssymb}
+%\usepackage{mathpazo}
+%\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+%\usepackage{graphicx}
+%\usepackage{gb4e}
 
 %----------------------------------------------------------------------------------------
 
-\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+\input{structure_min} % Insert the commands.tex file which contains the majority of the structure behind the template
 
 \begin{document}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
-
-\begingroup
-\thispagestyle{empty}
-\begin{tikzpicture}[remember picture,overlay]
-\coordinate [below=12cm] (midpoint) at (current page.north);
-\node at (current page.north west)
-{\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
-\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Ecuaciones Diferenciales\\[15pt] % Book title
-{\Large Una intrododucci\'on a la dinámica no lineal}\\[20pt] % Subtitle
-{\huge Pedro Miramontes\\ Augusto Cabrera Becerril\\ Ulises Rayón}}}; % Author name
-\end{tikzpicture}};
-\end{tikzpicture}
-\vfill
-\endgroup
+\maketitle
+%\begingroup
+%\thispagestyle{empty}
+%\begin{tikzpicture}[remember picture,overlay]
+%\coordinate [below=12cm] (midpoint) at (current page.north);
+%\node at (current page.north west)
+%{\begin{tikzpicture}[remember picture,overlay]
+%\node[anchor=north west,inner sep=0pt] at (0,0) {
+%\includegraphics[width=\paperwidth]{background}
+%}; % Background image
+%\draw[anchor=north] (midpoint) node %[fill=ocre!30!white,fill opacity=0.6,text %opacity=1,inner %sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Ecuaciones Diferenciales\\[15pt] % Book title
+%{\Large Una introducci\'on a la dinámica no lineal}\\[20pt] % Subtitle
+%{\huge Pedro Miramontes\\ Augusto Cabrera Becerril\\ Ulises Rayón}}}; % Author name
+%\end{tikzpicture}};
+%\end{tikzpicture}
+%\vfill
+%\endgroup
 
 %----------------------------------------------------------------------------------------
 %	COPYRIGHT PAGE
 %----------------------------------------------------------------------------------------
 
-\newpage
-~\vfill
-\thispagestyle{empty}
+%\newpage
+%~\vfill
+%\thispagestyle{empty}
 
-\noindent %Copyright \copyleft\ 2019 John Smith\\ % Copyright notice
+%\noindent %Copyright \copyleft\ 2019 John Smith\\ % Copyright notice
 
 %\noindent \textsc{Published by Publisher}\\ % Publisher
 
 %\noindent \textsc{book-website.com}\\ % URL
 
-\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
+%\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
 
 %\noindent \textit{First printing, March 2013} % Printing/edition date
 
@@ -99,15 +102,15 @@
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+%\chapterimage{chapter_head_1.pdf} % Table of contents heading image
 
-\pagestyle{empty} % No headers
+%\pagestyle{empty} % No headers
 
 \tableofcontents % Print the table of contents itself
 
-\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
 
-\pagestyle{fancy} % Print headers again
+%\pagestyle{fancy} % Print headers again
 
 %----------------------------------------------------------------------------------------
 %	PART
@@ -119,7 +122,7 @@
 %	Capitulo 1
 %----------------------------------------------------------------------------------------
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
+%\chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Una nota histórica}
 
@@ -128,7 +131,7 @@
 %----------------------------------------------------------------------------------------
 
 \chapter{Ecuaciones Diferenciales de Primer Orden:
-        Lineales y No-Lineales}
+        Lineales y no Lineales}
 
 \section{Una idea intuitiva}\index{Una idea intuitiva}
 

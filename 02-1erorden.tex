@@ -1,0 +1,76 @@
+
+
+En la Naturaleza existe una gran cantidad de procesos que a lo largo del tiempo cambian o evolucionan a {\it tasa constante}. En esta sección haremos las definiciones esenciales y en las próximas veremos ejemplos de ellos.
+
+Sin embargo, primero queremos precisar que cuando hablemos de {\it Naturaleza } entenderemos que comprende al mundo vivo --humano o no humano-- y los fenómenos que involucran a la materia inerte.
+
+Vamos a  comenzar por lo básico. Supongamos que tenemos una magnitud $p(t)$ que es función del tiempo. Dicha magnitud puede representar a cualquier variable de interés de estudio: tamaño de una población, cantidad de dinero, número de enfermos, cantidad de material radioactivo, etcétera. Empezaremos por suponer que $p(t)$ solamente puede evaluarse en valores discretos del tiempo por lo cual es de interés estudiar la sucesión:
+\[
+\{p(t)\}_{t=0}^n = p(0),p(1),p(2),\hdots p(n)
+\]
+\noindent donde $n$ es un valor arbitrario del tiempo.
+
+$p(n+1)-p(n)$ representa el incremento de la variable $p$ en una unidad de tiempo, mientras que:
+
+ 
+\begin{equation} \label{eq:1}
+ \dfrac {p(n+1) -p(n) }{p(n)}
+\end{equation}
+
+ 
+ Es el incremento de la magnitud $p$ con respecto a los existentes. Dado que el valor de un cociente no se altera si se multiplica por el mismo número su numerador y su denominador, se puede elegir un factor adecuado de manera que el denominador de la expresión \ref{eq:1} sea $100$ en cuyo caso diremos que se tiene  \emph{el incremento porcentual} o bien el \emph{incremento per cápita} de la magnitud $p(t)$ por unidad de tiempo. Si suponemos que el incremento porcentual es una constante $q$ es decir:
+ 
+  \begin{equation} \label{eq:2}
+ \dfrac {p(n+1) -p(n) }{p(n)}=q
+\end{equation}
+
+\noindent Entonces el incremento por unidad de tiempo se puede expresar como: 
+
+ \begin{equation} \label{eq:3}
+ p(n+1) -p(n)=p(n)q
+\end{equation}
+
+De donde se deriva el hecho de que para medir el incremento de la magnitud $p$ en una unidad de tiempo, da lo mismo restar el valor futuro al actual que multiplicar el valor actual por la tasa de crecimiento porcentual por unidad de tiempo. Un despeje más nos lleva a:
+
+ \begin{equation} \label{eq:4}
+ p(n+1)=p(n)+p(n)q
+\end{equation}
+
+\noindent y arribamos a una verdad de perogrullo: el valor futuro de la magnitud $p(t)$ es igual a lo que se tenía más lo que aumentó. Más aún:
+
+ \begin{equation} \label{eq:5}
+ p(n+1)=p(n)(1+q)
+\end{equation}
+
+Entonces, el valor futuro es el valor anterior multiplicado por el factor $1+q$ que por esta razón recibe le nombre de \emph{tasa de reemplazo}.
+
+Si ponemos $n=0$ y con la igualdad \ref{eq:5} calculamos $p(1)$ que, a su vez, nos sirve para calcular $p(2)$ y así sucesivamente. Llegamos la la expresión:
+
+ \begin{equation} \label{eq:6}
+ p(n)=p(0)(1+q)^n
+\end{equation}
+
+Esta es una \emph{fórmula predictiva}. Si se conoce la condición inicial $p(0)$ y la tasa de crecimiento \emph{per cápita} por unidad de tiempo, entonces la expresión \ref{eq:6} nos da la capacidad de conocer el valor futuro de $p$ para cualquier tiempo transcurrido mientras el tiempo se mida en unidades discretas.
+
+\begin{exe}
+		\ex {EJEMPLO
+		
+		\noindent La bacteria \emph{Escherichia coli} tiene una forma aproximadamente cilíndrica en la que la altura del cilindro mide cerca de 1$\mu$. Se reproduce por bipartición cada hora. La pregunta es ¿Sí se tiene inicialmente una bacteria, cuantas habrá después de una semana?.
+		
+		Si $p(0)=1$ y la unidad de tiempo es una hora, entonces $p(1)=2$ y, por lo tanto 
+		 
+\begin{equation} \label{eq:7}
+ q=\frac{p(1)-p(0)}{p(0)}=\dfrac{2-1}{1}=1=\dfrac{100}{100}=100\%
+\end{equation}
+
+Una semana tiene 168 horas, por lo tanto y de acuerdo con nuestra fórmula predictiva \ref{eq:6}, dado que $q=1$ el resultado del ejercicio es:
+
+\[
+p(168)=2^{168}\approx 10^50
+\]
+Se deja al lector que realice el siguiente cálculo: si la bacteria fuera un cubo con $1\mu$ de lado ¿Qué volumen ocupan las bacterias que resultan de la reproducción a partir de una sola después de una semana?
+}
+		
+\end{exe}
+
+
