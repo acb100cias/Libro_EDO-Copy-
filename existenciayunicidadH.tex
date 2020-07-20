@@ -1,22 +1,23 @@
 \section{Teoremas de existencia y unicidad de las soluciones}
 
-La clase de las ecuaciones diferenciales ordinarias que son integrables por cuadraturas es muy limitada, por ello la mayoría de las ecuaciones se resuelve usando métodos de aproximación numérica...
+La clase de las ecuaciones diferenciales ordinarias que son integrables por cuadraturas es muy limitada, por ello la mayor\'ia de las ecuaciones se resuelve usando m\'etodos de aproximaci\'on num\'erica.
 
 
 \begin{teorema}
-Si en la ecuación
+Si en la ecuaci\'on
 $$
 \dfrac{\mathrm{d}f}{\mathrm{d}t}=f(x,y)
 $$
-la función $f$ es continua en $D=\left[x_0-a,x_0+a\right]\times\left[y_0-b,y_0+b\right]$, además $f$ es Lipschitz-continua en $D$, es decir que existe una constante $N$ tal que $|f(x_1,y_1)-f(x_2,y_2)|\leq N|y_1,y_2|$ para $(x_i,y_i)\in D$.
+la funci\'on
+$f$ es continua en $D=\left[x_0-a,x_0+a\right]\times\left[y_0-b,y_0+b\right]$, adem\'as $f$ es Lipschitz-continua en $D$, es decir que existe una constante $N$ tal que $|f(x_1,y_1)-f(x_2,y_2)|\leq N|y_1,y_2|$ para $(x_i,y_i)\in D$.
 
-Entonces existe una solución única $y=\bar{y}(x)$ en el intervalo $\left[x_0-H,x_0+H\right]$ que satisface $y(x_0)=y_0$ y donde $H<\min\{a,\frac{b}{M},\frac{1}{N}\}$, $M=\max_{D}\{|f(x,y)|\} $
+Entonces existe una soluci\'on \'unica $y=\bar{y}(x)$ en el intervalo $\left[x_0-H,x_0+H\right]$ que satisface $y(x_0)=y_0$ y donde $H<\min\{a,\frac{b}{M},\frac{1}{N}\}$, $M=\max_{D}\{|f(x,y)|\} $
 \end{teorema}
 
 
-Las condiciones del teorema  requieren aclaración. La solución p[ara la ecuación, que satisface las condiciones iniciales  existe sólo para $x\in [x_0-a,x_0+a]$ pero $y$ puede existir fuera del rectángulo $D$. Es decir $y=y_0\pm b$ para algún $x=x_1\in[x_0-a,x_0+a]$. Si $x_1>x_0$ para $x>x_1$, la solución puede no estardefinida.
+Las condiciones del teorema  requieren aclaraci\'on. La soluci\'on para la ecuaci\'on, que satisface las condiciones iniciales  existe s\'olo para $x\in [x_0-a,x_0+a]$ pero $y$ puede existir fuera del rect\'angulo $D$. Es decir $y=y_0\pm b$ para alg\'un $x=x_1\in[x_0-a,x_0+a]$. Si $x_1>x_0$ para $x>x_1$, la soluci\'on puede no estar definida.
 
-Podemos garantizar que $y=\bar{y}(x)$ no se sale de $D$ cuando $x\in[x_0-H,x_0+H]$ con $H<a$ y $H<\frac{b}{M}$, $M=\tan\alpha$. Donde $\alpha$ es el coeficiente angular de latangente a la curva integral buscada. Si estas rectas se salen de $D$ entonces las absisas de los puntos de corte son $x_0\pm\dfrac{b}{M}$. Así la absisa  del punto de salida de lacurva inegral de $D$ puede solamente ser menor o igual que $x_0+\frac{b}{M}$ y mayor o igual que $x_0-\frac{b}{M}$. Puede mostrarse ka existencia  dela solución en $[x_0-H,x_0+H]$ con $H=\min\{a,\frac{b}{M}\}$ pero será más sencillo mostrarlo para $H<\min\{a,\frac{b}{M},\frac{1}{N}\}$
+Podemos garantizar que $y=\bar{y}(x)$ no se sale de $D$ cuando $x\in[x_0-H,x_0+H]$ con $H<a$ y $H<\frac{b}{M}$, $M=\tan\alpha$. Donde $\alpha$ es el coeficiente angular de latangente a la curva integral buscada. Si estas rectas se salen de $D$ entonces las absisas de los puntos de corte son $x_0\pm\dfrac{b}{M}$. As\'i la absisa  del punto de salida de lacurva inegral de $D$ puede solamente ser menor o igual que $x_0+\frac{b}{M}$ y mayor o igual que $x_0-\frac{b}{M}$. Puede mostrarse la existencia  dela soluci\'on en $[x_0-H,x_0+H]$ con $H=\min\{a,\frac{b}{M}\}$ pero ser\'a m\'as sencillo mostrarlo para $H<\min\{a,\frac{b}{M},\frac{1}{N}\}$
 
 \begin{figure}[H]
 \centering
@@ -49,17 +50,17 @@ Podemos garantizar que $y=\bar{y}(x)$ no se sale de $D$ cuando $x\in[x_0-H,x_0+H
 \end{figure}
 
 
-La condición de Lipschitz 
+La condici\'on de Lipschitz 
 $$
 |f(x_1,y_1)-f(x_2,y_2)|\leq N(y_1-y_2)
 $$
-puede ser sustituida por otra más fuerte, pero más fácilmente comprobable, la existencia de $\partial_{y} f^{'}$ en $D$ y que sea acotada.
+puede ser sustituida por otra m\'as fuerte, pero m\'as f\'acilmente comprobable, la existencia de $\partial_{y} f^{'}$ en $D$ y que sea acotada.
 
 En efecto para $(x,y)\in D$ y $|f'_y(x,y)|\leq N$ entonces por el teorema del valor intermedio:
 $$
 |f(x_1,y_1)-f(x_2,y_2)|=|f'_y(x,\xi)|-|y_1-y_2| 
 $$
-con $\xi\in (y_1,y_2)$. Así $(x,\xi)\in D$ y $|f_y(x,\xi)|\leq N$ , $|f(x,y_1)-f(x,y_2)|\leq N|y_1-y_2|$.
+con $\xi\in (y_1,y_2)$. As\'i $(x,\xi)\in D$ y $|f_y(x,\xi)|\leq N$ , $|f(x,y_1)-f(x,y_2)|\leq N|y_1-y_2|$.
 
 \begin{proof}
 Observemos primero que 
@@ -87,5 +88,21 @@ y por tanto
 $$
 y(x)=y_0+\int_{x_0}^xf(x,y)\mathrm{d}x
 $$
-Ahora, hagamos una aproximación de  la solución 
+Ahora, hagamos una aproximaci\'on de  la soluci\'on usando Euler
+$$
+y=y_n(x)
+$$
+con paso $h_n=\frac{H}{n}$ en $[x_0,x_0+H]$.
+
+La poligonal asociada a la aproximaci\'on de Euler no sale de la regi\'on $D$ pues el coeficiente angular de cada segnmento es menor  que $M$ en m\'odulo.
+
+A continuaci\'on probaremos que
+\begin{enumerate}
+\item la sucesi\'on  $(y_n)$ converge uniformemente.
+\item $\bar{y}(x)=\lim_{n\rightarrow infty}y_n$ es soluci\'on para la ecuaci\'on integral.
+  \item La soluci\'on es \'unica
+\end{enumerate} 
+
+Probemos $\bf{(1)}$. 
 \end{proof}
+ 
