@@ -1,153 +1,175 @@
+% $Id: $
+\documentclass[letterpaper,12pt,twoside]{report}
 
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[10pt]{book} % Default font size and left-justified equations
 \usepackage[utf8]{inputenc}
-\usepackage[spanish, es-tabla]{babel}
-
-\usepackage{amsmath, amssymb, amsthm, amsfonts, latexsym}
-\usepackage{extpfeil}
-\usepackage[left=1.5cm , right=1.5 cm]{geometry}
-\usepackage{fancyhdr}
-\usepackage{multicol}
-\usepackage{array,booktabs,tabularx}
+\usepackage[spanish]{babel}
 \usepackage{graphicx}
-\usepackage{tikz}
-\usetikzlibrary{arrows,shapes,trees,automata}
-\usepackage{pgfplots}
-\usepackage{float}
-\usepackage{float}
-\usepackage{subfigure}
-\usepackage{xcolor}
-\usepackage{pifont}
-\usepackage{makeidx}
-\makeindex
-\usepackage{tocbibind}
-%\usepackage{hyperref}
-\usepackage{pdfpages}
+\usepackage{fix-cm} % scalable fonts
+\usepackage{type1cm}
+\usepackage{lettrine}
+\usepackage{amsmath,amssymb}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\usepackage{gb4e}
 
+\linespread{1.05}      
+% Different font in captions
+\newcommand{\captionfonts}{\small}
 
-%---------------------------------------------------------------------------------------
-\title{ Ecuaciones Diferenciales Ordinarias.}
-\author{Pedro Miramontes\\ Augusto Cabrera Becerril\\ Ulises Ray\'on}
-\date{\today}
-
-%-----------------------------------------------------------------------------------------
-\newtheorem{definicion}{Definici髇}
-\newtheorem{ejemplo}{Ejemplo}
-\newtheorem{teorema}{Teorema}
-\newtheorem{lema}{Lema}
-\newtheorem{prop}{Proposici髇}
-\newtheorem{af}{Afirmaci髇}
-\newtheorem{coro}{Corolario}
-\newtheorem{obs}{Observaci髇}
-\newtheorem{casos}{Caso}
-\renewcommand{\spanishrefname}{Bibliograf\'ia.}
-\renewcommand{\spanishproofname}{Prueba.}
-\decimalpoint
-\pagestyle{fancy}
-\def\sectionautorefname{section}
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+ \vskip\abovecaptionskip
+ \sbox\@tempboxa{{\captionfonts #1: #2}}%
+ \ifdim \wd\@tempboxa>\hsize
+   {\captionfonts #1: #2\par}
+ \else
+   \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+ \fi
+ \vskip\belowcaptionskip}
+\makeatother   % Cancel the effect of \makeatletter
 
 
 
-%----------------------------------------------------------------------------------------
+\usepackage[round]{natbib} 
 
-%\input{structure_min} % Insert the commands.tex file which contains the majority of the structure behind the template
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-\maketitle
-
-%----------------------------------------------------------------------------------------
-%	COPYRIGHT PAGE
-%----------------------------------------------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
-
-
-\tableofcontents % Print the table of contents itself
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Primera Parte}
-
-%----------------------------------------------------------------------------------------
-%	Capitulo 1
-%----------------------------------------------------------------------------------------
-
-
-\chapter{Una nota hist\'orica}
-
-%----------------------------------------------------------------------------------------
-%	Capitulo 2
-%----------------------------------------------------------------------------------------
-
-\chapter{Ecuaciones Diferenciales de Primer Orden:
-        Lineales y no Lineales}
-\include{ideaintuitiva}
-\include{interes}
-\include{poblaciones}
-\include{separacondevariables}
-\include{desintegracion}
-\include{mezclado}
-\include{poblaciones2}
-%\include{existenciayunicidad}
-\include{existenciayunicidadH}
-%----------------------------------------------------------------------------------------
-%	Capitulo 3
-%----------------------------------------------------------------------------------------
-\chapter{Sistemas Lineales Planos y Ecuaciones de Orden Superior}
-
-
-%----------------------------------------------------------------------------------------
-%	Capitulo 4
-%----------------------------------------------------------------------------------------
-\chapter{Sistemas Tres Dimensionales y Sistemas No Lineales}
-
-%----------------------------------------------------------------------------------------
-%	Capitulo 5
-%----------------------------------------------------------------------------------------
-\chapter{Atractores Extra\~nos y Caos}
-
-%----------------------------------------------------------------------------------------
-%	Capitulo 6
-%----------------------------------------------------------------------------------------
-\chapter{Teor\'ia de Estabilidad}
-
-%----------------------------------------------------------------------------------------
-%	Capitulo 6
-%----------------------------------------------------------------------------------------
-\chapter{Sistemas Conservativos y Disipativos}
 
 
 
-%----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
 
-\chapter*{Bibliography}
+% Use Roman numerals for table of contents etc.
+\pagenumbering{roman}
 
-%----------------------------------------------------------------------------------------
-%	INDEX
-%----------------------------------------------------------------------------------------
+\thispagestyle{empty}
+\vspace{20 mm}
+\begin{center}
+\Huge
+Ecuaciones Diferenciales\\
+\Large Una introducci贸n a la din谩mica no lineal\\
+      
+\Large
+\vspace{15mm}
+\textsc{Pedro Miramontes}\\
+Augusto Cabrera\\
+Ulises Ray贸n\\
+\Large
+\large
+Facultad de Ciencias\\
+Universidad Nacional Aut\'onoma de M\'exico\\
+\vspace{90 mm}
+Ciudad de M\'exico\hspace{1mm}  \\
+  
+2020\\
+\normalsize
+
+\pagebreak
+\thispagestyle{empty}
+\vspace{20 mm}
+
+ 
+\vspace{5 mm}
+\large
+Copyleft 2020 by \textsc{Pedro Miramontes, Augusto Cabrera y Ulises Ray贸n}\\
+\normalsize
+\vspace{10 mm}
+
+\vspace{10 mm}
+Todos los derechos de propiedad de esta publicaci\'on pertenecen a los autores
+quienes otorgan su autorizaci\'on para que el lector pueda copiar,
+imprimir o distribuir su trabajo libremente, en parte o en su totalidad, con las
+\'unicas condiciones que: (i) El nombre del autor y el t\'itulo original deba ser citado en todo
+momento, (iii) el texto no sea modificado y (iii) el uso de los
+contenidos de esta publicaci\'on no sea comercial o con fines de lucro.\\
+
+
+
+\vspace{60 mm}
+Este libro ha sido producido electr\'onicamente con Software Libre
+y acorde a una filosof\'ia de acceso libre para publicaciones acad\'emicas.
+\end{center}
+
+\newpage
+
+
+\newpage
+
+
+%\vspace*{3cm}
+
+\chapter*{Pr\'ologo}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%end of cover page
+\newpage
+
+\tableofcontents
+
+
+
+\newpage
+
+
+
+
+
+
+%\cleardoublepage
+\chapter*{Agradecimientos}
+
+
+
+
+
+
+%\newpage
+\cleardoublepage
+
+% Normal numbers for the rest of the thesis.
+\pagenumbering{arabic}
+
+
+\chapter*{Notas hist贸ricas}
+\addcontentsline{toc}{chapter}{Notas hist贸ricas}
+%\include{01-notas}
 
 \cleardoublepage
-%\phantomsection
-%\setlength{\columnsep}{0.75cm}
-%\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
-%\printindex
 
-%----------------------------------------------------------------------------------------
+
+\chapter*{Ecuaciones diferenciales de primer orden}
+\addcontentsline{toc}{chapter}{Ecuaciones diferenciales de primer orden}
+\include{02-1erorden}
+
+
+
+\cleardoublepage
+
+
+\chapter*{Sistemas lineales}
+\addcontentsline{toc}{chapter}{Sistemas lineales}
+%\include{03-sistemas}
+
+
+
+
+\chapter*{Sistemas no lineales}
+\addcontentsline{toc}{chapter}{Sistemas no lineales}
+%\include{04-nolineales}
+
+\cleardoublepage
+
+
+
+
+
+
+
 
 \end{document}
+

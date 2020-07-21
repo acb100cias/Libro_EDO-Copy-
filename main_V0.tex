@@ -1,0 +1,151 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{book} % Default font size and left-justified equations
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+
+\usepackage{amsmath, amssymb, amsthm, amsfonts, latexsym}
+\usepackage{extpfeil}
+\usepackage[left=2.5cm , right=2.5 cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{array,booktabs,tabularx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,trees,automata}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{makeidx}
+\makeindex
+\usepackage{tocbibind}
+%\usepackage{hyperref}
+\usepackage{pdfpages}
+
+
+%---------------------------------------------------------------------------------------
+\title{ Ecuaciones Diferenciales Ordinarias.}
+\author{Pedro Miramontes\\ Augusto Cabrera Becerril\\ Ulises Ray\'on}
+\date{\today}
+
+%-----------------------------------------------------------------------------------------
+\newtheorem{definicion}{Definici�n}
+\newtheorem{ejemplo}{Ejemplo}
+\newtheorem{teorema}{Teorema}
+\newtheorem{lema}{Lema}
+\newtheorem{prop}{Proposici�n}
+\newtheorem{af}{Afirmaci�n}
+\newtheorem{coro}{Corolario}
+\newtheorem{obs}{Observaci�n}
+\newtheorem{casos}{Caso}
+\renewcommand{\spanishrefname}{Bibliograf\'ia.}
+\renewcommand{\spanishproofname}{Prueba.}
+\decimalpoint
+\pagestyle{fancy}
+\def\sectionautorefname{section}
+
+
+
+%----------------------------------------------------------------------------------------
+
+%\input{structure_min} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+
+\tableofcontents % Print the table of contents itself
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Primera Parte}
+
+%----------------------------------------------------------------------------------------
+%	Capitulo 1
+%----------------------------------------------------------------------------------------
+
+
+\chapter{Una nota hist\'orica}
+
+%----------------------------------------------------------------------------------------
+%	Capitulo 2
+%----------------------------------------------------------------------------------------
+
+\chapter{Ecuaciones Diferenciales de Primer Orden:
+        Lineales y no Lineales}
+\include{ideaintuitiva}
+\include{interes}
+\include{poblaciones}
+\include{separacondevariables}
+\include{desintegracion}
+\include{mezclado}
+\include{poblaciones2}
+%\include{existenciayunicidad}
+\include{existenciayunicidadH}
+%----------------------------------------------------------------------------------------
+%	Capitulo 3
+%----------------------------------------------------------------------------------------
+\chapter{Sistemas Lineales Planos y Ecuaciones de Orden Superior}
+
+
+%----------------------------------------------------------------------------------------
+%	Capitulo 4
+%----------------------------------------------------------------------------------------
+\chapter{Sistemas Tres Dimensionales y Sistemas No Lineales}
+
+%----------------------------------------------------------------------------------------
+%	Capitulo 5
+%----------------------------------------------------------------------------------------
+\chapter{Atractores Extra\~nos y Caos}
+
+%----------------------------------------------------------------------------------------
+%	Capitulo 6
+%----------------------------------------------------------------------------------------
+\chapter{Teor\'ia de Estabilidad}
+
+%----------------------------------------------------------------------------------------
+%	Capitulo 6
+%----------------------------------------------------------------------------------------
+\chapter{Sistemas Conservativos y Disipativos}
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\chapter*{Bibliography}
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+%\phantomsection
+%\setlength{\columnsep}{0.75cm}
+%\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+%\printindex
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
